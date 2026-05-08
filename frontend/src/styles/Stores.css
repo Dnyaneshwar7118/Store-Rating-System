@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.heading {
+    margin-top: 40px;
+    text-align: center;
+}
+
+/* =========================
+   BODY
+========================= */
+
+body {
+    font-family: 'Roboto', sans-serif;
+
+    background: #f1f3f4;
+
+    color: #202124;
+}
+
+/* =========================
+   PAGE
+========================= */
+
+.stores-page {
+    max-width: 1100px;
+
+    margin: auto;
+
+    padding: 30px 20px;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.stores-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 180px 15px 170px;
+}
+
+.stores-header h1 {
+    font-size: 38px;
+
+    font-weight: 500;
+
+    color: #202124;
+}
+
+/* =========================
+   LOGOUT BUTTON
+========================= */
+
+.logout-btn {
+    background: #1a73e8;
+
+    color: white;
+
+    border: none;
+
+    padding: 12px 22px;
+
+    border-radius: 8px;
+
+    font-size: 15px;
+
+    font-weight: 500;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.logout-btn:hover {
+    background: #1558b0;
+}
+
+/* =========================
+   GRID
+========================= */
+
+.stores-grid {
+    display: flex;
+    flex-direction: column;
+
+    gap: 24px;
+}
+
+/* =========================
+   BLOG CARD
+========================= */
+
+.store-card {
+    background: white;
+    margin: 10px 180px 10px 173px;
+    border-radius: 16px;
+
+    overflow: hidden;
+    transition: 0.3s;
+
+    display: flex;
+
+    min-height: 220px;
+}
+
+.store-card:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+/* =========================
+   LEFT IMAGE
+========================= */
+
+.store-card::before {
+    content: "";
+
+    width: 320px;
+
+    background-image: url('https://images.unsplash.com/photo-1488459716781-31db52582fe9');
+
+    background-size: cover;
+
+    background-position: center;
+
+    flex-shrink: 0;
+}
+
+/* =========================
+   CONTENT
+========================= */
+
+.store-card-content {
+    padding: 28px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: baseline;
+    /* width: 100%; */
+    gap: 110px;
+    margin: 36px;
+}
+
+/* =========================
+   TITLE
+========================= */
+
+.store-card h2 {
+    font-size: 28px;
+
+    margin-bottom: 14px;
+
+    color: #202124;
+}
+
+/* =========================
+   DESCRIPTION
+========================= */
+
+.store-card p {
+    font-size: 16px;
+
+    line-height: 1.7;
+
+    color: #5f6368;
+
+    margin-bottom: 20px;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.store-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* =========================
+   DROPDOWN
+========================= */
+
+.store-card select {
+    padding: 12px 14px;
+
+    border-radius: 8px;
+
+    border: 1px solid #dadce0;
+
+    font-size: 15px;
+
+    outline: none;
+
+    background: white;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.store-card select:focus {
+    border-color: #1a73e8;
+
+    box-shadow:
+        0 0 0 3px rgba(26, 115, 232, 0.15);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 850px) {
+    .store-card {
+        flex-direction: column;
+    }
+
+    .store-card::before {
+        width: 50px;
+
+
+    }
+
+    .stores-header {
+        flex-direction: column;
+
+        gap: 20px;
+    }
+
+    .stores-header h1 {
+        font-size: 30px;
+    }
+
+}
